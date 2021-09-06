@@ -13,19 +13,23 @@ export class ServersComponent implements OnInit {
 
   allowNewServer = false;
   serverCreatedStatus = 'Server not created!';
-  serverName ='initial value';
+  serverName = '';
+  serverCreated = false;
 
   constructor() { 
-    setTimeout(() => {
-        this.allowNewServer = true;
-    }, 2000);
+    // setTimeout(() => {
+    //     this.allowNewServer = true;
+    // }, 2000);
   }
 
   ngOnInit(): void {
   }
 
-  onCreateServer(){
-    this.serverCreatedStatus = `Server created!! and server name is ${this.serverName}`;
+  onCreateServer() {
+    this.serverCreated = true;
+    let sname = this.serverName;
+    this.serverCreatedStatus = `Server created!! and server name is ${sname}`;
+    this.serverName = '';
   }
 
   onUpdateServerName(event: Event){
