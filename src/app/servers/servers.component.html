@@ -1,23 +1,23 @@
 <label>Server Name:</label>
 <!--not using ngModel-->
-<input type="text"
+<!-- <input type="text"
         class="forms-control"
-        (input)="onUpdateServerName($event)">
+        (input)="onUpdateServerName($event)"> -->
 
 <!--using ngModel-->
 <input type="text"
         class="forms-control"
         [(ngModel)]="serverName">
 
-<p>{{serverName}}</p>
+<!-- <p>{{serverName}}</p> -->
 <hr>
 <button class="btn btn-primary" 
         [disabled]="!allowNewServer"
         (click)="onCreateServer()">Add Server</button>
 <!--using string interpolation-->
-<p>{{allowNewServer}}</p> 
+<!-- <p>{{allowNewServer}}</p>  -->
 <!--using property binding-->
-<p [innerText]="allowNewServer"></p>
+<!-- <p [innerText]="allowNewServer"></p> -->
 <hr>
 <p>{{serverCreatedStatus}}</p> 
 <hr>
